@@ -1,0 +1,14 @@
+MANADO P TAMPA BABELI — SEO BOOST QA
+
+Completed:
+- Product pages with self-canonical URLs
+- Product JSON-LD in initial HTML
+- BreadcrumbList JSON-LD on product pages
+- Local-intent informational pages without invented address/reviews
+- robots.txt + sitemap.xml updated
+- Admin noindex retained
+- Cache-Control added for HTML while assets remain long-lived
+- No fake ratings/reviews added
+
+Before publishing, verify the live URLs in Cloudflare and Google Search Console.
+Google may take several days to crawl/index new pages.

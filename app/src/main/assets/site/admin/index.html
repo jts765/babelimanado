@@ -1,0 +1,282 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin — MANADO P TAMPA BABELI</title><meta name="robots" content="noindex,nofollow"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><style>
+:root{--blue:#005dcc;--blue2:#0b78e6;--navy:#07356f;--red:#ef2436;--ink:#17355f;--muted:#6f7f95;--bg:#f6f9fd;--card:#fff;--line:#dbe5f1;--green:#16b957;--shadow:0 10px 28px rgba(19,64,120,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{cursor:pointer}.wrap{width:min(1180px,94%);margin:auto}
+.topstrip{background:#064a9d;color:#fff;font-size:12px;font-weight:700}.topstrip .wrap{height:34px;display:flex;align-items:center;justify-content:space-between;gap:20px}.topstrip .item{display:flex;align-items:center;gap:8px;white-space:nowrap}.topstrip .item span{opacity:.9}
+.header{background:#fff;border-bottom:1px solid #e8eef6}.headerMain{height:112px;display:grid;grid-template-columns:420px 1fr auto;gap:24px;align-items:center}.brand img{width:405px;max-width:100%;height:auto;display:block}.searchBox{display:flex;height:44px;border:1px solid #cbd9e8;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 4px 15px rgba(14,74,130,.06)}.searchBox input{border:0;outline:0;flex:1;padding:0 18px;color:var(--ink);min-width:0}.searchBox .searchClear{width:38px;background:#fff;color:var(--muted);font-size:20px;display:none}.searchBox button{width:58px;border:0;background:var(--blue);color:#fff;font-size:20px}.headActions{display:flex;align-items:center;gap:18px}.headAction{display:flex;align-items:center;gap:7px;background:none;border:0;color:var(--ink);font-weight:800;font-size:12px;padding:5px}.headAction small{display:block;color:var(--muted);font-weight:600}.headAction .ico{font-size:23px;line-height:1}.divider{height:34px;width:1px;background:#e5ebf2}
+.nav{background:linear-gradient(90deg,#0758b5,#0874dc);color:#fff}.nav .wrap{height:48px;display:flex;align-items:center;gap:4px}.nav a{height:48px;padding:0 25px;display:flex;align-items:center;font-size:13px;font-weight:800}.nav a:hover,.nav a.active{background:rgba(0,35,93,.26)}
+.hero{background:#fff;padding:0 0 18px}.heroBanner{width:100%;border-radius:0 0 12px 12px;overflow:hidden;box-shadow:var(--shadow)}.heroBanner img{display:block;width:100%;height:auto;aspect-ratio:1224/305;object-fit:cover}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:14px;box-shadow:0 5px 18px rgba(20,70,120,.05)}.trustItem{min-height:72px;display:flex;align-items:center;gap:13px;padding:12px 20px;border-right:1px solid var(--line)}.trustItem:last-child{border-right:0}.trustItem .trustIcon{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#e9f3ff;color:var(--blue);font-size:20px;flex:0 0 auto}.trustItem strong{display:block;font-size:13px;color:var(--ink)}.trustItem span{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+section{padding:26px 0}.shopLayout{display:grid;grid-template-columns:225px minmax(0,1fr) 250px;gap:14px;align-items:start}.sideCard,.payCard,.whyCard{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}.sideTitle,.payTitle{background:linear-gradient(90deg,#0758b5,#0b73d9);color:#fff;padding:15px 16px;font-weight:900}.catList{padding:5px 10px}.catList button{width:100%;display:flex;justify-content:space-between;align-items:center;padding:13px 8px;border:0;border-bottom:1px solid #eef2f7;background:#fff;color:var(--ink);font-weight:700;font-size:12px;text-align:left}.catList button:last-child{border-bottom:0}.catList button:hover{color:var(--blue);padding-left:12px}.catIcon{width:26px;display:inline-block;font-size:17px;color:var(--blue)}
+.promoHero{min-height:252px;border-radius:12px;overflow:hidden;position:relative;background:linear-gradient(120deg,#082d5e,#126cc7);box-shadow:var(--shadow)}.promoHero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}.promoOverlay{position:relative;z-index:1;height:100%;min-height:252px;padding:24px 28px;display:flex;flex-direction:column;justify-content:center;width:56%;color:#fff;background:linear-gradient(90deg,rgba(5,38,82,.95),rgba(5,38,82,.68),transparent)}.promoBadge{display:inline-flex;width:max-content;background:#0b87ef;color:#fff;border-radius:999px;padding:5px 10px;font-size:10px;font-weight:900}.promoOverlay h1{font-size:31px;line-height:1.02;margin:10px 0 4px}.promoOverlay p{margin:0 0 14px;font-size:12px;line-height:1.5}.priceBox{display:flex;align-items:end;gap:10px;flex-wrap:wrap}.priceBox strong{font-size:27px;color:#fff}.priceBox del{font-size:12px;opacity:.75}.promoBtn{display:inline-flex;width:max-content;margin-top:13px;background:#ff263d;color:#fff;border:0;border-radius:8px;padding:10px 15px;font-weight:900}.timerLine{margin-top:9px;font-size:10px;color:#d9ecff}.timer{font-size:18px;color:#fff;font-weight:900;display:inline-block;margin-left:4px}
+.payCard{padding-bottom:12px}.payBody{padding:12px}.payBody img{width:100%;display:block;border:6px solid #fff;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,.08)}.payHint{text-align:center;color:var(--muted);font-size:11px;line-height:1.45;margin-top:8px}.waBox{margin:12px;background:linear-gradient(135deg,#15b953,#29d76b);color:#fff;border-radius:12px;padding:14px;text-align:center}.waBox b{font-size:15px}.waBox span{display:block;font-size:11px;margin:4px 0 10px}.waBox a{display:block;background:#fff;color:#159d49;border-radius:999px;padding:9px;font-weight:900}
+.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:14px}.sectionHead h2{margin:0;font-size:21px;color:var(--ink)}.sectionHead p{margin:5px 0 0;color:var(--muted);font-size:12px}.sectionHead .hot{color:var(--red);font-size:22px;margin-right:4px}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid #cfdceb;background:#fff;color:#52677f;padding:7px 11px;border-radius:999px;font-size:11px;font-weight:800}.filter.active,.filter:hover{background:#e8f3ff;border-color:#8fc1f5;color:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 4px 15px rgba(18,61,110,.05);transition:.18s ease}.card:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(18,61,110,.12)}.visual{height:170px;display:grid;place-items:center;background:#f7faff;position:relative;border-bottom:1px solid #eef3f8}.productImg{width:100%;height:100%;object-fit:contain;padding:10px}.mini{width:105px;height:105px;border-radius:22px;background:linear-gradient(145deg,#dfeaf7,#fff);box-shadow:0 14px 25px rgba(13,65,120,.12)}.mini:after{content:'';display:block;width:88px;height:88px;margin:8px;border-radius:18px;background:linear-gradient(145deg,#d7e7fa,#4e89c7)}.badge{position:absolute;top:9px;left:9px;background:#ff2c43;color:#fff;border-radius:5px;padding:4px 7px;font-size:9px;font-weight:900;z-index:2}.heart{position:absolute;top:8px;right:8px;border:1px solid #dce6f0;background:#fff;color:#5b6e85;width:29px;height:29px;border-radius:50%;z-index:2}.heart.on{color:var(--red)}.info{padding:12px}.cat{color:#527aa6;font-size:9px;font-weight:900;text-transform:uppercase}.name{font-weight:900;font-size:13px;line-height:1.25;margin:5px 0;min-height:32px}.stars{color:#ffb000;font-size:11px}.desc{color:var(--muted);font-size:10px;line-height:1.4;min-height:42px;margin-top:5px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.stock{color:#1a9a54;font-size:10px;margin-top:6px}.price{font-weight:1000;font-size:17px;color:#e92035;margin-top:6px}.old{font-size:10px;color:#8997a8;text-decoration:line-through;margin-left:4px}.promoTag{display:inline-flex;gap:4px;align-items:center;color:#e92035;background:#fff0f2;padding:4px 6px;border-radius:5px;font-size:9px;font-weight:900;margin-top:5px}.add,.detail{width:100%;margin-top:8px;border-radius:7px;padding:9px;font-weight:900;font-size:11px}.add{border:0;background:linear-gradient(90deg,#0865cc,#087ce9);color:#fff}.detail{border:1px solid #cbd9e8;background:#fff;color:#1c5d9e}
+.promoCode{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff8e8;border:1px dashed #f2c45c;border-radius:10px;padding:12px 14px;color:#76591d;font-size:12px}.copyBtn{border:1px solid #e2b74f;background:#fff;color:#795c20;border-radius:7px;padding:7px 10px;font-weight:900;font-size:11px}.features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.feature{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:var(--shadow)}.feature .fi{font-size:24px}.feature b{display:block;margin:7px 0;font-size:13px}.feature span{font-size:11px;color:var(--muted);line-height:1.55}.reviewGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.review{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}.review .quote{font-size:25px;color:var(--blue)}.review p{color:#5c6f85;font-size:12px;line-height:1.55}.review small{color:var(--muted)}.admin{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}.stat strong{display:block;font-size:24px;color:var(--blue);margin-top:5px}.trackBox{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:12px}.trackBox input{background:#fff;border:1px solid #cbd9e8;border-radius:8px;padding:10px;outline:none}.trackResult{margin-top:10px}.orderCard{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:8px}.orderMeta{color:var(--muted);font-size:11px;line-height:1.5;margin-top:5px}.statusPill{background:#eaf8ef;color:#178c4b;padding:5px 8px;border-radius:999px;font-size:10px;font-weight:900}.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:12px}.timeline .tl{padding:9px 7px;border:1px solid #dce6ef;border-radius:8px;background:#f8fbfe;text-align:center;font-size:9px;color:#7a8999}.timeline .tl.active{border-color:#a6cef6;background:#eef7ff;color:#1c67aa}.timeline .tl b{display:block;margin-bottom:3px;color:inherit}.miniActions{display:flex;gap:8px;margin-top:10px}.miniActions .btn{flex:1}
+footer{background:#062d61;color:#d6e6f8;padding:28px 0;margin-top:22px}.footerGrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}.footerBrand img{width:220px;max-width:100%;background:#fff;border-radius:7px;padding:4px}.footerTitle{font-weight:900;color:#fff;margin-bottom:9px}.footerText{font-size:11px;line-height:1.6;color:#a9c1dd}.footerBottom{border-top:1px solid rgba(255,255,255,.12);margin-top:22px;padding-top:14px;font-size:10px;color:#9bb4cf;display:flex;justify-content:space-between;gap:10px}
+.btn{border:0;border-radius:8px;padding:10px 14px;font-weight:900;font-size:12px}.primary{background:linear-gradient(90deg,#0864c9,#087ce9);color:#fff}.ghost{background:#fff;border:1px solid #cbd9e8;color:#174f8d}.wa{width:100%;border:0;border-radius:9px;background:#1bb957;color:#fff;padding:12px;font-weight:900}.notice{padding:12px;border:1px solid #b8dbfa;background:#eff8ff;border-radius:9px;color:#275b88;font-size:12px;line-height:1.5}.modal{display:none;position:fixed;inset:0;background:rgba(4,22,43,.55);z-index:100}.modal.show{display:block}.drawer{position:absolute;right:0;top:0;width:min(460px,95%);height:100%;overflow:auto;background:#fff;padding:20px;box-shadow:-10px 0 35px rgba(0,0,0,.15)}.panel{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(680px,94%);max-height:90vh;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 20px 50px rgba(0,0,0,.2)}.ph{display:flex;justify-content:space-between;align-items:center}.ph h2{margin:0;color:var(--ink)}.close{border:0;background:none;color:#53708f;font-size:28px}.item{display:flex;justify-content:space-between;gap:12px;padding:13px 0;border-bottom:1px solid #edf2f7}.item small{color:var(--muted)}.qty{display:flex;gap:5px;align-items:center}.qty button{width:27px;height:27px;border:1px solid #cbd9e8;background:#f5f9fd;color:#174f8d;border-radius:6px}.total{display:flex;justify-content:space-between;font-weight:1000;font-size:18px;margin:17px 0}.form{display:grid;gap:9px}.form input,.form textarea,.form select{width:100%;background:#fff;border:1px solid #cbd9e8;border-radius:8px;color:var(--ink);padding:11px;outline:none}.payBox{margin-top:12px;border:1px solid #dbe6f0;background:#fbfdff;border-radius:10px;padding:12px}.status{color:#168f4b;font-size:11px}.waFloat{position:fixed;right:18px;bottom:18px;z-index:50;background:#18b957;color:#fff;border-radius:999px;padding:12px 16px;font-weight:1000;box-shadow:0 12px 28px rgba(0,0,0,.2)}
+@media(max-width:1050px){.headerMain{grid-template-columns:300px 1fr auto}.brand img{width:285px}.shopLayout{grid-template-columns:190px minmax(0,1fr)}.payCard{grid-column:1/-1;display:grid;grid-template-columns:250px 1fr;align-items:start}.payTitle{grid-column:1/-1}.payBody{padding:12px}.waBox{margin:12px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:820px){.topstrip .item:nth-child(2){display:none}.headerMain{height:92px;grid-template-columns:1fr auto;gap:12px}.brand img{width:260px}.searchBox{grid-column:1/-1;grid-row:2}.headerMain{height:145px}.headActions .label{display:none}.nav .wrap{overflow:auto}.nav a{padding:0 15px;white-space:nowrap}.shopLayout{grid-template-columns:1fr}.sideCard{display:none}.payCard{grid-column:auto;display:block}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.trust{grid-template-columns:repeat(2,1fr)}.trustItem:nth-child(2){border-right:0}.trustItem:nth-child(-n+2){border-bottom:1px solid var(--line)}.features{grid-template-columns:repeat(2,1fr)}.footerGrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.wrap{width:92%}.topstrip .wrap{justify-content:center}.topstrip .item:nth-child(3){display:none}.headerMain{grid-template-columns:1fr auto;height:132px}.brand img{width:220px}.headActions{gap:5px}.headAction{font-size:10px}.searchBox{height:42px}.nav a{font-size:11px;padding:0 12px}.heroBanner img{aspect-ratio:1224/430;object-fit:cover}.trust{grid-template-columns:1fr}.trustItem{border-right:0!important;border-bottom:1px solid var(--line)}.trustItem:last-child{border-bottom:0}.promoOverlay{width:76%;padding:18px}.promoOverlay h1{font-size:23px}.promoOverlay p{font-size:10px}.priceBox strong{font-size:22px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.visual{height:145px}.info{padding:9px}.name{font-size:11px}.price{font-size:14px}.desc{font-size:9px;min-height:37px}.add,.detail{font-size:10px;padding:8px}.features,.reviewGrid,.admin{grid-template-columns:1fr}.sectionHead{align-items:flex-start;flex-direction:column}.filters{width:100%;overflow:auto;flex-wrap:nowrap}.filter{white-space:nowrap}.timeline{grid-template-columns:repeat(2,1fr)}.footerGrid{grid-template-columns:1fr}.footerBottom{flex-direction:column}.waFloat{right:12px;bottom:12px;padding:11px 14px}.promoCode{align-items:flex-start;flex-direction:column}.trackBox{grid-template-columns:1fr}.payCard img{max-height:360px;object-fit:contain}}
+
+/* V12 Ultimate polish */
+.quickTrust{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.quickTrust .qt{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;box-shadow:var(--shadow);display:flex;gap:10px;align-items:center}
+.qt .qti{font-size:22px}.qt b{font-size:12px;display:block}.qt span{font-size:10px;color:var(--muted)}
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.how .step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;position:relative;box-shadow:var(--shadow)}.stepNo{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#e8f3ff;color:var(--blue);font-weight:1000;margin-bottom:9px}.how b{font-size:13px}.how p{font-size:11px;line-height:1.5;color:var(--muted);margin:6px 0 0}
+.paySummary{display:flex;justify-content:space-between;gap:10px;align-items:center;background:#edf7ff;border:1px solid #cde5fb;border-radius:9px;padding:10px 12px;margin-top:10px;font-size:12px}.paySummary strong{font-size:17px;color:var(--blue)}
+.mobileNav{display:none}.waFloat{box-shadow:0 10px 24px rgba(21,185,83,.25);font-weight:900}
+@media(max-width:900px){.headerMain{grid-template-columns:1fr auto;height:auto;padding:12px 0;gap:10px}.brand img{width:260px}.searchBox{grid-column:1/-1;grid-row:2}.headActions .label,.headActions .divider{display:none}.headActions{gap:4px}.headAction{padding:5px}.shopLayout{grid-template-columns:1fr}.sideCard{display:none}.payCard{display:grid;grid-template-columns:1fr 1fr;align-items:start}.payBody{grid-column:1}.waBox{margin:12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.features,.how{grid-template-columns:repeat(2,1fr)}.trust{grid-template-columns:repeat(2,1fr)}.trustItem:nth-child(2){border-right:0}.trustItem:nth-child(3),.trustItem:nth-child(4){border-top:1px solid var(--line)}.quickTrust{grid-template-columns:1fr}.nav .wrap{overflow:auto}.nav a{padding:0 16px;white-space:nowrap}.promoOverlay{width:70%}}
+@media(max-width:560px){body{padding-bottom:64px}.topstrip .wrap{overflow:hidden;gap:14px}.topstrip .item:nth-child(2){display:none}.headerMain{grid-template-columns:1fr auto}.brand img{width:205px}.nav{display:none}.heroBanner img{aspect-ratio:16/7}.trust{grid-template-columns:1fr}.trustItem{border-right:0!important;border-top:1px solid var(--line)}.trustItem:first-child{border-top:0}.payCard{display:block}.promoHero,.promoOverlay{min-height:245px}.promoOverlay{width:88%;padding:18px}.promoOverlay h1{font-size:26px}.promoOverlay p{font-size:11px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.visual{height:135px}.info{padding:9px}.name{font-size:11px}.price{font-size:14px}.desc{min-height:34px;font-size:9px}.add,.detail{font-size:10px;padding:8px}.features,.how{grid-template-columns:1fr}.reviewGrid{grid-template-columns:1fr}.sectionHead{align-items:flex-start;flex-direction:column}.filters{width:100%;overflow:auto;flex-wrap:nowrap;padding-bottom:3px}.filter{white-space:nowrap}.waFloat{right:10px!important;bottom:76px!important;padding:10px 12px!important}.mobileNav{position:fixed;display:grid;grid-template-columns:repeat(4,1fr);bottom:0;left:0;right:0;height:62px;background:#fff;border-top:1px solid var(--line);z-index:180;box-shadow:0 -8px 24px rgba(15,55,100,.1)}.mobileNav button{border:0;background:#fff;color:#5a6d82;font-size:10px;font-weight:900}.mobileNav button span{display:block;font-size:20px;margin-bottom:2px}.mobileNav button.active{color:var(--blue)}.quickTrust{margin-top:10px}}
+.v14tools{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.v14tool{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}.v14tool b{display:block;margin-bottom:5px}.v14tool span{display:block;color:var(--muted);font-size:12px}.reviewForm{display:grid;gap:8px;margin-top:12px}.reviewForm input,.reviewForm textarea,.reviewForm select,.adminForm input,.adminForm textarea,.adminForm select{width:100%;box-sizing:border-box;padding:11px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)}.reviewItem{border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:9px;background:var(--card)}.adminTools{margin-top:14px;border:1px dashed #8aa5c5;border-radius:14px;padding:14px}.checkField{display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid #cbd9e8;border-radius:8px;background:#fff;font-size:12px;font-weight:700}.checkField input{width:16px;height:16px}.adminForm{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.adminForm .full{grid-column:1/-1}.adminRows{margin-top:12px}.adminRow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center;border-bottom:1px solid var(--line);padding:10px 0}.adminRow:last-child{border-bottom:0}.adminRow b{overflow-wrap:anywhere}.backupRow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center}.backupAction{border:1px solid #8fc1f5;background:#eef7ff;color:#155c9f;border-radius:8px;padding:8px 10px;font-weight:900;font-size:11px}.backupMeta{font-size:10px;color:var(--muted);margin-top:3px}.backupDeleted{background:#fff9f9;border-radius:8px;padding-left:8px;padding-right:8px}.backupEdited{background:#fbfdff;border-radius:8px;padding-left:8px;padding-right:8px}.miniBtns{display:flex;gap:6px;flex-wrap:wrap}.v14tag{display:inline-block;font-size:10px;font-weight:900;border:1px solid #8aa5c5;border-radius:999px;padding:4px 7px;color:var(--muted)}@media(max-width:820px){.v14tools{grid-template-columns:repeat(2,1fr)}.checkField{display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid #cbd9e8;border-radius:8px;background:#fff;font-size:12px;font-weight:700}.checkField input{width:16px;height:16px}.adminForm{grid-template-columns:1fr}}
+ .adminPage .panel{position:static!important;left:auto!important;top:auto!important;right:auto!important;bottom:auto!important;transform:none!important;width:auto!important;max-width:none!important;max-height:none!important;overflow:visible!important;margin:0 0 14px!important;box-sizing:border-box!important;} .adminPage .panel:last-child{margin-bottom:0!important;} .adminPage .panel .tabs{position:static!important;} .adminPage .adminShell{position:relative!important;display:block!important;} .adminPage{padding:28px 0 60px} .adminShell{max-width:1100px;margin:auto;width:94%} .adminTop{display:flex;justify-content:space-between;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow);margin-bottom:14px} .adminTop h1{margin:0;font-size:24px} .adminTop p{margin:4px 0 0;color:var(--muted);font-size:12px} .panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow);margin-bottom:14px} .panel h2{margin:0 0 12px;font-size:18px} .checkField{display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid #cbd9e8;border-radius:8px;background:#fff;font-size:12px;font-weight:700}.checkField input{width:16px;height:16px}.adminForm{display:grid;grid-template-columns:repeat(3,1fr);gap:9px} .adminForm input,.adminForm select,.adminForm textarea{width:100%;border:1px solid #cbd9e8;border-radius:8px;padding:10px;outline:none;background:#fff} .adminForm .full{grid-column:1/-1} .row{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #edf2f7;padding:12px 0} .row:first-child{border-top:0} .actions{display:flex;gap:7px;flex-wrap:wrap} .actions button,.row>button,.row select{border:1px solid #cbd9e8;background:#fff;border-radius:7px;padding:8px 11px;font-weight:800;font-size:11px} .actions .danger,.row .danger{color:#d71935;border-color:#f0b9c1} .muted{color:var(--muted);font-size:11px;line-height:1.5} .notice{display:none;background:#fff5d8;border:1px solid #f0d18a;color:#735716;border-radius:9px;padding:11px;margin-bottom:14px;font-size:12px} .tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px} .tabs button{border:1px solid #cbd9e8;background:#fff;border-radius:999px;padding:8px 13px;font-weight:800;font-size:11px} .tabs button.active{background:#e8f3ff;border-color:#8fc1f5;color:var(--blue)} @media(max-width:800px){.checkField{display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid #cbd9e8;border-radius:8px;background:#fff;font-size:12px;font-weight:700}.checkField input{width:16px;height:16px}.adminForm{grid-template-columns:1fr 1fr}} @media(max-width:520px){.checkField{display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid #cbd9e8;border-radius:8px;background:#fff;font-size:12px;font-weight:700}.checkField input{width:16px;height:16px}.adminForm{grid-template-columns:1fr}.adminTop{align-items:flex-start;flex-direction:column}.row{align-items:flex-start;flex-direction:column}.actions{width:100%}}<style id="admin-layout-safety">
+.adminPage .panel,.adminPage .panel *{box-sizing:border-box;}
+.adminPage .panel{position:static!important;inset:auto!important;transform:none!important;float:none!important;clear:both!important;}
+.adminPage .adminShell{position:relative!important;display:block!important;width:min(1100px,94%)!important;margin-left:auto!important;margin-right:auto!important;}
+.adminPage .adminTop{position:relative!important;z-index:1;}
+.adminPage .actions{position:static!important;}
+.backupMeta{font-size:12px;color:#60738f;margin-top:4px}.backupAction{font-size:12px;font-weight:800;padding:7px 10px;border:1px solid #b9ccec;border-radius:9px;background:#fff;color:#0b3b73;cursor:pointer}.backupAction:hover{background:#eef6ff}.backupDeleted{border-color:#f0b7b7;background:#fff8f8}.backupEdited{border-color:#b9ccec;background:#fbfdff}
+/* V15 admin improvements */
+.productAdminSearch{display:grid;grid-template-columns:1fr 190px;gap:8px;margin:10px 0}.productAdminSearch input,.productAdminSearch select{width:100%;box-sizing:border-box;padding:10px;border:1px solid #cbd9e8;border-radius:9px;background:#fff}.adminPreview{display:flex;align-items:center;gap:10px;margin-top:8px}.adminPreview img{width:72px;height:72px;object-fit:contain;border:1px solid var(--line);border-radius:9px;background:#fff}.adminRow{border:1px solid #e5edf6!important;border-radius:10px;margin-bottom:7px;padding:10px!important;background:#fff}.adminRow .actions{justify-content:flex-end}.stockState{display:inline-block;padding:3px 7px;border-radius:999px;font-size:10px;font-weight:900}.stockState.ok{background:#eaf9f0;color:#178c4b}.stockState.low{background:#fff6df;color:#9b6a00}.stockState.out{background:#fff0f0;color:#c12b38}@media(max-width:700px){.productAdminSearch{grid-template-columns:1fr}}
+</style>.statusOnline{color:#15934d;font-weight:900}.statusWarn{color:#b87500;font-weight:900}.backupAction:disabled{opacity:.55;cursor:not-allowed}.row{min-width:0}.row .actions{flex-wrap:wrap}</style></head><body>
+<div id="loginGate" class="adminPage">
+  <div class="adminShell" style="max-width:520px">
+    <div class="adminTop">
+      <div><h1>🔐 Admin — MANADO P TAMPA BABELI</h1><p>Masuk menggunakan akun administrator.</p></div>
+    </div>
+    <div id="loginNotice" class="notice" style="display:none"></div>
+    <div class="panel">
+      <h2>Login Administrator</h2>
+      <p class="muted">Gunakan email <b>jhuandi17@gmail.com</b> atau akun yang memiliki <b>app_metadata.role = admin</b>.</p>
+      <div class="adminForm" style="grid-template-columns:1fr">
+        <input id="loginEmail" type="email" autocomplete="username" placeholder="Email">
+        <input id="loginPassword" type="password" autocomplete="current-password" placeholder="Password">
+      </div>
+      <div class="actions" style="margin-top:10px">
+        <button id="loginBtn" class="btn primary" onclick="adminLogin()">🔐 Masuk ke Admin</button>
+        <button class="btn ghost" onclick="location.href='../'">← Kembali ke Toko</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="app" class="adminPage" style="display:none"><div class="adminShell"><div class="adminTop"><div><h1>🛠️ Admin — MANADO P TAMPA BABELI</h1><p>Halaman khusus administrator. Akses diberikan untuk akun admin atau <b>jhuandi17@gmail.com</b>.</p></div><div><span id="email" class="v14tag"></span> <button class="btn ghost" onclick="logout()">Keluar</button></div></div><div id="notice" class="notice"></div><div id="dbSetup" class="notice" style="display:none;background:#fff8e8;border-color:#f2c45c;color:#6b531c"><b>⚠️ Database Supabase belum siap.</b><div id="dbSetupText" style="margin-top:6px;line-height:1.5"></div><div class="actions" style="margin-top:10px"><button class="btn primary" onclick="copySetupSql()">📋 Salin SQL Setup</button><button class="btn ghost" onclick="window.open('../SUPABASE_ADMIN_SETUP_FINAL.sql','_blank')">Buka SQL Setup</button></div></div><div class="panel"><h2>📦 Produk Katalog</h2><div class="actions" style="margin:10px 0"><button class="btn primary" onclick="newProduct()">➕ Tambah Produk Baru</button></div><div class="muted" style="margin-bottom:10px">Total produk: <b id="count">0</b>. Perubahan disimpan langsung ke Supabase dan dilindungi RLS.</div><div class="productAdminSearch"><input id="productSearch" placeholder="Cari nama, SKU, merek..." oninput="filterAdminProducts()"><select id="productCategoryFilter" onchange="filterAdminProducts()"><option value="all">Semua kategori</option><option value="mobile">Kabel & Charger</option><option value="audio">Audio</option><option value="gaming">Gaming</option><option value="computer">Aksesoris</option><option value="home">Rumah & Dekorasi</option></select></div><div class="adminForm"><input id="pid" placeholder="ID / SKU"><input id="name" placeholder="Nama produk"><select id="category"><option value="mobile">Kabel & Charger</option><option value="audio">Audio</option><option value="gaming">Gaming</option><option value="computer">Aksesoris</option><option value="home">Rumah & Dekorasi</option></select><input id="brand" placeholder="Merek"><div><label for="price" style="display:block;font-size:12px;font-weight:800;margin-bottom:5px">Harga Jual / Promo (Rp)</label><input id="price" type="number" min="0" step="1" inputmode="numeric" placeholder="Contoh: 29000"></div><div><label for="compare" style="display:block;font-size:12px;font-weight:800;margin-bottom:5px">Harga Normal / Coret (Rp)</label><input id="compare" type="number" min="0" step="1" inputmode="numeric" placeholder="Contoh: 39000"></div><input id="stock" type="number" placeholder="Stok"><input id="image" placeholder="URL/path gambar"><div class="adminPreview"><img id="imagePreview" src="" alt="Pratinjau gambar" style="display:none"><span class="muted">Pratinjau gambar produk</span></div><input id="badge" placeholder="Badge, mis. PROMO / NEW"><input id="rating" type="number" min="0" max="5" step="0.1" placeholder="Rating 0–5"><label class="checkField"><input id="active" type="checkbox" checked> Tampilkan produk di katalog</label><textarea id="desc" class="full" rows="3" placeholder="Deskripsi produk"></textarea></div><div class="actions" style="margin-top:10px"><button class="btn primary" onclick="saveProduct()">Simpan Produk</button><button class="btn ghost" onclick="reset()">Bersihkan</button><button class="btn ghost" onclick="loadProducts()">Refresh</button></div><div id="productRows" style="margin-top:10px"></div></div><div class="panel" id="backupPanel"><div class="tabs"><button class="active" onclick="showBackupPanel('history',this)">🛡️ Backup Produk</button></div><div class="muted" style="margin-bottom:10px">Backup otomatis dibuat oleh Supabase sebelum setiap <b>Edit</b> atau <b>Hapus</b>. Anda dapat mengembalikan versi sebelumnya.</div><div class="actions" style="margin-bottom:8px"><button class="btn ghost" onclick="loadProductBackups()">Refresh Backup</button><button class="btn ghost" onclick="clearBackupSelection()">Reset Pilihan</button></div><input id="backupSearch" placeholder="Cari backup berdasarkan nama, SKU, atau aksi..." oninput="filterBackupRows()" style="width:100%;box-sizing:border-box;border:1px solid #cbd9e8;border-radius:8px;padding:10px;margin-bottom:8px"><div id="backupRows"></div></div><div class="panel"><div class="tabs"><button class="active" onclick="showPanel('orders',this)">📋 Pesanan</button><button onclick="showPanel('reviews',this)">⭐ Review</button></div><div id="orders"><div class="actions" style="margin-bottom:8px"><button class="btn ghost" onclick="loadOrders()">Refresh Pesanan</button></div><div id="orderRows"></div></div><div id="reviews" style="display:none"><div class="actions" style="margin-bottom:8px"><button class="btn ghost" onclick="loadReviews()">Refresh Review</button></div><div id="reviewRows"></div></div></div></div></div><script>const CONFIG={SUPABASE_URL:'https://ugncwhtfgststrsjeboh.supabase.co',SUPABASE_PUBLISHABLE_KEY:'sb_publishable_EZGJun4AafZQedf57Z-B5A_f2dt-45G'};
+const sb=(CONFIG.SUPABASE_URL.startsWith('https://')&&!CONFIG.SUPABASE_URL.includes('YOUR_')&&!CONFIG.SUPABASE_PUBLISHABLE_KEY.includes('YOUR_'))?supabase.createClient(CONFIG.SUPABASE_URL,CONFIG.SUPABASE_PUBLISHABLE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storageKey:'mpb-admin-auth'}}):null;
+const esc=s=>String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+const money=n=>new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(Number(n)||0);
+const ADMIN_EMAIL='jhuandi17@gmail.com';
+const isAdmin=u=>!!(u&&(u.app_metadata?.role==='admin'||String(u.email||'').trim().toLowerCase()===ADMIN_EMAIL));
+async function user(){if(!sb)return null;try{const r=await sb.auth.getUser();return r.data?.user||null}catch(_){return null}}
+function loginNotice(t){const el=document.getElementById('loginNotice');el.textContent=t;el.style.display='block'}
+function show(t){const el=document.getElementById('notice');el.textContent=t;el.style.display='block'}
+function hide(){document.getElementById('notice').style.display='none'}
+function errorText(e){return e?.message||e?.error_description||'Terjadi kesalahan yang tidak diketahui.'}
+async function requireAdmin(){
+  if(!sb){show('Supabase belum dikonfigurasi.');return false}
+  const u=await user();
+  if(!isAdmin(u)){show('Sesi admin tidak valid. Silakan login kembali.');return false}
+  return true
+}
+async function adminLogin(){
+  if(!sb){loginNotice('Supabase belum dikonfigurasi. Periksa konfigurasi.');return}
+  const email=document.getElementById('loginEmail').value.trim();
+  const password=document.getElementById('loginPassword').value;
+  if(!email||!password){loginNotice('Email dan password wajib diisi.');return}
+  const btn=document.getElementById('loginBtn');btn.disabled=true;btn.textContent='⏳ Memeriksa...';loginNotice('');
+  try{
+    await sb.auth.signOut({scope:'local'});
+    const r=await sb.auth.signInWithPassword({email,password});
+    if(r.error) throw r.error;
+    const u=r.data?.user;
+    if(!u) throw new Error('Login berhasil tetapi sesi pengguna tidak ditemukan.');
+    if(!isAdmin(u)){
+      await sb.auth.signOut({scope:'local'});
+      throw new Error('Akun berhasil login, tetapi tidak memiliki akses administrator. Gunakan akun admin yang terdaftar.');
+    }
+    await openAdmin(u);
+  }catch(e){loginNotice(errorText(e));}
+  finally{btn.disabled=false;btn.textContent='🔐 Masuk ke Admin';}
+}
+function newProduct(){reset();show('Mode Tambah Produk aktif. Isi data produk lalu klik Simpan Produk. Produk akan langsung masuk katalog jika status Aktif.');scrollTo({top:0,behavior:'smooth'});}
+function reset(){['pid','name','brand','price','compare','stock','image','badge','rating','desc'].forEach(id=>{const e=document.getElementById(id);if(e)e.value=''});document.getElementById('category').value='mobile';document.getElementById('active').checked=true;editingProductId=null;updateImagePreview()}
+function isMissingTable(e,name){const m=String(e?.message||'').toLowerCase();return m.includes('could not find the table')&&m.includes('public.'+name.toLowerCase())}
+function showDbSetup(html){const box=document.getElementById('dbSetup');if(box){document.getElementById('dbSetupText').innerHTML=html;box.style.display='block'}}
+function hideDbSetup(){const box=document.getElementById('dbSetup');if(box)box.style.display='none'}
+async function copySetupSql(){try{const r=await fetch('../SUPABASE_ADMIN_SETUP_FINAL.sql');const t=await r.text();await navigator.clipboard.writeText(t);show('SQL setup berhasil disalin. Tempel di Supabase SQL Editor lalu Run.')}catch(e){show('Tidak dapat menyalin otomatis. Buka file SQL dan salin isinya secara manual.')}}
+async function loadProducts(){
+  if(!await requireAdmin())return;
+  const el=document.getElementById('productRows');el.innerHTML='<div class="muted">⏳ Memuat produk...</div>';
+  const r=await sb.from('products').select('*').order('created_at',{ascending:false});
+  if(r.error){
+    el.innerHTML='<div class="muted">Gagal memuat produk: '+esc(r.error.message)+'</div>';
+    if(isMissingTable(r.error,'products')) showDbSetup('Tabel <b>public.products</b> belum tersedia di Supabase. Jalankan <b>SUPABASE_ADMIN_SETUP_FINAL.sql</b> sekali di Supabase SQL Editor, lalu klik Refresh.');
+    else show('Produk gagal dimuat: '+r.error.message);
+    return;
+  }
+  hideDbSetup();
+  el.innerHTML=(r.data||[]).map(p=>{const n=Math.max(0,Number(p.stock||0));const st=n<=0?'<span class="stockState out">Stok habis</span>':n<=5?'<span class="stockState low">Stok terbatas</span>':'<span class="stockState ok">Tersedia</span>';return `<div class="row adminProductRow" data-search="${esc([p.id,p.name,p.brand,p.category].join(' ')).toLowerCase()}" data-category="${esc(p.category||'')}"><div><b>${esc(p.name)}</b><div class="muted">${esc(p.id)} · ${money(p.price)} · stok ${n} ${st}</div><div class="muted">${esc(p.category||'-')} · ${p.is_active?'Aktif':'Nonaktif'}</div></div><div class="actions"><button onclick="editProduct(${JSON.stringify(String(p.id))})">Edit</button><button onclick="quickEditPrice(${JSON.stringify(String(p.id))})">💰 Harga</button><button onclick="quickEditStock(${JSON.stringify(String(p.id))})">📦 Stok</button><button onclick="previewProduct(${JSON.stringify(String(p.id))})">👁 Preview</button><button class="danger" onclick="deleteProduct(${JSON.stringify(String(p.id))})">Hapus</button></div></div>`}).join('')||'<div class="muted">Belum ada produk.</div>';
+  document.getElementById('count').textContent=r.data?.length||0;
+}
+let editingProductId=null;let savingProduct=false;
+async function saveProduct(){
+  if(savingProduct)return; savingProduct=true;
+  if(!await requireAdmin()){savingProduct=false;return;}hide();
+  const id=document.getElementById('pid').value.trim(),n=document.getElementById('name').value.trim();
+  if(!id||!n){savingProduct=false;return show('ID/SKU dan nama produk wajib diisi.');}
+  const priceValue=Number(document.getElementById('price').value||0),compareValue=Number(document.getElementById('compare').value||0),stockValue=Number(document.getElementById('stock').value||0),imageValue=document.getElementById('image').value.trim();
+  if(!/^[A-Za-z0-9._-]{2,80}$/.test(id)){savingProduct=false;return show('ID/SKU hanya boleh berisi huruf, angka, titik, garis bawah, atau tanda minus (2–80 karakter).');}
+  if(!Number.isFinite(priceValue)||priceValue<0||!Number.isInteger(priceValue)){savingProduct=false;return show('Harga harus berupa angka bulat 0 atau lebih.');}
+  if(!Number.isFinite(compareValue)||compareValue<0||!Number.isInteger(compareValue)){savingProduct=false;return show('Harga normal harus berupa angka bulat 0 atau lebih.');}
+  if(!Number.isFinite(stockValue)||stockValue<0||!Number.isInteger(stockValue)){savingProduct=false;return show('Stok harus berupa bilangan bulat 0 atau lebih.');}
+  if(imageValue.length>1000){savingProduct=false;return show('URL/path gambar terlalu panjang. Maksimal 1000 karakter.');}
+  const ratingValue=Number(document.getElementById('rating').value||0),badgeValue=document.getElementById('badge').value.trim();if(!Number.isFinite(ratingValue)||ratingValue<0||ratingValue>5){savingProduct=false;return show('Rating harus berada di antara 0 dan 5.');}if(badgeValue.length>40){savingProduct=false;return show('Badge maksimal 40 karakter.');}const row={id,name:n,category:document.getElementById('category').value,brand:document.getElementById('brand').value.trim(),price:priceValue,compare_price:compareValue,stock:Math.floor(stockValue),image_url:imageValue,description:document.getElementById('desc').value.trim(),rating:Math.round(ratingValue*10)/10,badge:badgeValue||'NEW',is_active:document.getElementById('active').checked};
+  let r;
+  if(editingProductId){
+    if(String(editingProductId)!==String(id)){savingProduct=false;return show('Saat mengedit, ID/SKU tidak boleh diganti. Buat produk baru dengan ID/SKU berbeda.');}
+    r=await sb.from('products').update(row).eq('id',editingProductId);
+  }else{
+    const existing=await sb.from('products').select('id,name').eq('id',id).maybeSingle();
+    if(existing.error){savingProduct=false;return show('Gagal memeriksa ID/SKU: '+existing.error.message);}
+    if(existing.data){savingProduct=false;return show('ID/SKU '+esc(id)+' sudah digunakan oleh produk '+esc(existing.data.name||'-')+'. Gunakan ID/SKU lain agar produk lama tidak tertimpa.');}
+    r=await sb.from('products').insert(row);
+  }
+  if(r.error){savingProduct=false;return show('Gagal menyimpan produk: '+r.error.message+' — periksa RLS/policy Supabase.');}
+  savingProduct=false;editingProductId=null;reset();show('Produk berhasil ditambahkan ke katalog. Jika status Aktif, produk akan tampil setelah katalog dimuat ulang.');await Promise.allSettled([loadProducts(),loadProductBackups()]);
+}
+
+function filterAdminProducts(){const q=(document.getElementById('productSearch')?.value||'').trim().toLowerCase();const c=document.getElementById('productCategoryFilter')?.value||'all';document.querySelectorAll('.adminProductRow').forEach(r=>{const okQ=!q||r.dataset.search.includes(q);const okC=c==='all'||r.dataset.category===c;r.style.display=okQ&&okC?'grid':'none'})}
+function updateImagePreview(){const src=document.getElementById('image')?.value.trim(),im=document.getElementById('imagePreview');if(!im)return;if(src){im.src=src;im.style.display='block';im.onerror=()=>{im.style.display='none'}}else{im.removeAttribute('src');im.style.display='none'}}
+async function quickEditStock(id){if(!await requireAdmin())return;const r=await sb.from('products').select('id,name,stock').eq('id',id).single();if(r.error)return show('Gagal mengambil stok: '+r.error.message);const raw=prompt('Masukkan stok baru untuk '+(r.data.name||r.data.id),String(r.data.stock??0));if(raw===null)return;const n=Number(String(raw).replace(/[^0-9]/g,''));if(!Number.isSafeInteger(n)||n<0)return show('Stok tidak valid. Gunakan angka bulat 0 atau lebih.');const save=await sb.from('products').update({stock:n}).eq('id',id);if(save.error)return show('Gagal memperbarui stok: '+save.error.message);show('Stok diperbarui menjadi '+n+' unit.');await loadProducts()}
+async function previewProduct(id){if(!await requireAdmin())return;const r=await sb.from('products').select('*').eq('id',id).single();if(r.error)return show('Gagal mengambil produk: '+r.error.message);const p=r.data;const w=window.open('','_blank','noopener');if(!w)return show('Popup diblokir browser. Izinkan popup untuk melihat preview.');w.document.write('<title>Preview '+esc(p.name)+'</title><body style="font-family:system-ui;background:#f6f9fd;margin:0;padding:30px"><div style="max-width:520px;margin:auto;background:#fff;border:1px solid #dbe5f1;border-radius:16px;padding:20px"><img src="'+esc(p.image_url||'')+'" style="width:100%;height:300px;object-fit:contain;border-radius:12px;background:#fff"><h2>'+esc(p.name)+'</h2><p>'+esc(p.description||'')+'</p><b style="font-size:22px">'+money(p.price)+'</b><p>Stok: '+Number(p.stock||0)+' unit · Kategori: '+esc(p.category||'-')+'</p></div></body>');w.document.close()}
+
+async function quickEditPrice(id){
+  if(!await requireAdmin())return;
+  const r=await sb.from('products').select('id,name,price,compare_price').eq('id',id).single();
+  if(r.error)return show('Gagal mengambil harga produk: '+r.error.message);
+  const p=r.data;
+  const current=Number(p.price||0);
+  const currentCompare=Number(p.compare_price||0);
+  const raw=prompt('Masukkan harga jual baru untuk '+(p.name||p.id)+'\n\nContoh: 29000',String(current));
+  if(raw===null)return;
+  const clean=String(raw).replace(/[^0-9]/g,'');
+  if(!clean)return show('Harga jual wajib diisi.');
+  const priceValue=Number(clean);
+  if(!Number.isSafeInteger(priceValue)||priceValue<0)return show('Harga jual tidak valid. Gunakan angka bulat, misalnya 29000.');
+  const rawCompare=prompt('Masukkan harga normal/coret (opsional).\n\nIsi 0 jika tidak ada.',String(currentCompare));
+  if(rawCompare===null)return;
+  const cleanCompare=String(rawCompare).replace(/[^0-9]/g,'');
+  const compareValue=cleanCompare?Number(cleanCompare):0;
+  if(!Number.isSafeInteger(compareValue)||compareValue<0)return show('Harga normal tidak valid.');
+  const save=await sb.from('products').update({price:priceValue,compare_price:compareValue}).eq('id',id);
+  if(save.error)return show('Gagal memperbarui harga: '+save.error.message+' — periksa RLS/policy Supabase.');
+  show('Harga '+(p.name||p.id)+' berhasil diperbarui menjadi '+money(priceValue)+'.');
+  await Promise.allSettled([loadProducts(),loadProductBackups()]);
+}
+async function editProduct(id){
+  if(!await requireAdmin())return;
+  const r=await sb.from('products').select('*').eq('id',id).single();
+  if(r.error)return show('Gagal mengambil produk: '+r.error.message);
+  const p=r.data; editingProductId=String(p.id);
+  document.getElementById('pid').value=p.id;document.getElementById('name').value=p.name||'';document.getElementById('brand').value=p.brand||'';document.getElementById('price').value=p.price||0;document.getElementById('compare').value=p.compare_price||0;document.getElementById('stock').value=p.stock||0;document.getElementById('image').value=p.image_url||'';document.getElementById('badge').value=p.badge||'';document.getElementById('rating').value=Number(p.rating??0);document.getElementById('active').checked=p.is_active!==false;document.getElementById('desc').value=p.description||'';document.getElementById('category').value=p.category||'mobile';
+  updateImagePreview();show('Mode Edit aktif: '+(p.name||p.id)+'. Sebelum perubahan disimpan, versi lama akan dibackup otomatis oleh Supabase.');
+  scrollTo({top:0,behavior:'smooth'});
+}
+async function deleteProduct(id){if(!await requireAdmin())return;if(!confirm('Hapus produk ini dari Supabase? Backup otomatis akan dibuat sebelum penghapusan.'))return;const r=await sb.from('products').delete().eq('id',id);if(r.error)return show('Gagal menghapus produk: '+r.error.message);show('Produk berhasil dihapus dan versi sebelumnya sudah dibackup otomatis.');await Promise.allSettled([loadProducts(),loadProductBackups()])}
+let backupCache=[];
+async function loadProductBackups(){
+  if(!await requireAdmin())return;
+  const el=document.getElementById('backupRows');
+  if(!el)return;
+  el.innerHTML='<div class="muted">⏳ Memuat riwayat backup...</div>';
+  const r=await sb.from('product_backups').select('*').order('created_at',{ascending:false}).limit(100);
+  if(r.error){
+    el.innerHTML='<div class="muted">Gagal memuat backup: '+esc(r.error.message)+'</div>';
+    if(isMissingTable(r.error,'product_backups')) showDbSetup('Tabel <b>public.product_backups</b> belum tersedia. Jalankan <b>SUPABASE_ADMIN_SETUP_FINAL.sql</b> terbaru (V5) di Supabase SQL Editor.');
+    return;
+  }
+  backupCache=r.data||[];
+  renderBackupRows();
+}
+function renderBackupRows(){
+  const el=document.getElementById('backupRows');
+  if(!el)return;
+  const q=(document.getElementById('backupSearch')?.value||'').trim().toLowerCase();
+  const rows=backupCache.filter(b=>{const p=b.snapshot||{};return !q||[b.product_id,b.action,p.name,p.brand,p.category,b.actor_email].filter(Boolean).join(' ').toLowerCase().includes(q)});
+  el.innerHTML=rows.map(b=>{
+    const p=b.snapshot||{};
+    const action=String(b.action||'').toUpperCase();
+    const deleted=action==='DELETE';
+    const title=esc(p.name||b.product_id||'-');
+    const when=b.created_at?new Date(b.created_at).toLocaleString('id-ID'): '-';
+    return `<div class="row ${deleted?'backupDeleted':'backupEdited'}"><div><b>${deleted?'🗑️':'✏️'} ${title}</b><div class="muted">SKU: ${esc(b.product_id||p.id||'-')} · ${action==='DELETE'?'sebelum dihapus':'sebelum diedit'}</div><div class="backupMeta">${esc(when)} · oleh ${esc(b.actor_email||'Admin')}</div></div><button class="backupAction" onclick="restoreProductBackup(${JSON.stringify(String(b.id))})">↩ Restore</button></div>`;
+  }).join('')||'<div class="muted">'+(backupCache.length?'Tidak ada backup yang cocok dengan pencarian.':'Belum ada backup produk. Backup akan muncul otomatis setelah Edit/Hapus.')+'</div>';
+}
+function filterBackupRows(){renderBackupRows()}
+function clearBackupSelection(){const e=document.getElementById('backupSearch');if(e)e.value='';renderBackupRows()}
+let restoringBackup=false;
+async function restoreProductBackup(backupId){
+  if(!await requireAdmin()||restoringBackup)return;
+  restoringBackup=true;
+  try{
+    const r=await sb.from('product_backups').select('*').eq('id',backupId).single();
+    if(r.error)throw new Error('Gagal mengambil backup: '+r.error.message);
+    const b=r.data, p=b?.snapshot;
+    if(!p||!p.id)throw new Error('Backup tidak valid atau snapshot produk tidak lengkap.');
+    if(!['UPDATE','DELETE'].includes(String(b.action||'').toUpperCase()))throw new Error('Jenis backup tidak dikenali.');
+    if(!confirm(`Restore produk "${p.name||p.id}" ke versi ${b.action==='DELETE'?'sebelum dihapus':'sebelum diedit'}?\n\nJika produk masih ada, versi saat ini akan dibackup otomatis sebelum restore.`))return;
+    const exists=await sb.from('products').select('id').eq('id',String(p.id)).maybeSingle();
+    if(exists.error)throw new Error('Gagal memeriksa produk saat restore: '+exists.error.message);
+    let rr;
+    if(exists.data){const copy={...p};delete copy.id;rr=await sb.from('products').update(copy).eq('id',String(p.id));}
+    else rr=await sb.from('products').insert(p);
+    if(rr.error)throw new Error('Restore gagal: '+rr.error.message);
+    show('Produk berhasil dipulihkan. Kondisi sebelum restore tetap diamankan oleh trigger backup.');
+    await Promise.allSettled([loadProducts(),loadProductBackups()]);
+  }catch(e){show(e.message||String(e));}finally{restoringBackup=false;}
+}
+function showBackupPanel(id,b){document.querySelectorAll('#backupPanel .tabs button').forEach(x=>x.classList.remove('active'));if(b)b.classList.add('active');if(id==='history')loadProductBackups()}
+async function loadOrders(){
+  if(!await requireAdmin())return;
+  const el=document.getElementById('orderRows');el.innerHTML='<div class="muted">⏳ Memuat pesanan...</div>';
+  const r=await sb.from('orders').select('*').order('created_at',{ascending:false}).limit(50);
+  if(r.error){
+    el.innerHTML=`<div class="muted">Gagal memuat pesanan: ${esc(r.error.message)}</div>`;
+    if(isMissingTable(r.error,'orders')) showDbSetup('Tabel <b>public.orders</b> belum tersedia. Jalankan SQL setup final untuk membuat struktur pesanan.');
+    return;
+  }
+  el.innerHTML=(r.data||[]).map(o=>`<div class="row"><div><b>${esc(o.order_code||o.id)}</b><div class="muted">${esc(o.customer_name||'-')} · ${money(o.total)}</div></div><select onchange="statusOrder(${JSON.stringify(String(o.id))},this.value)"><option ${o.status==='Menunggu konfirmasi'?'selected':''}>Menunggu konfirmasi</option><option ${o.status==='Pembayaran dikonfirmasi'?'selected':''}>Pembayaran dikonfirmasi</option><option ${o.status==='Diproses'?'selected':''}>Diproses</option><option ${o.status==='Selesai'?'selected':''}>Selesai</option><option ${o.status==='Dibatalkan'?'selected':''}>Dibatalkan</option></select></div>`).join('')||'<div class="muted">Belum ada pesanan.</div>';
+}
+async function statusOrder(id,status){if(!await requireAdmin())return;const r=await sb.from('orders').update({status}).eq('id',id);if(r.error)return show('Gagal memperbarui status: '+r.error.message);show('Status pesanan diperbarui.');await loadOrders()}
+async function loadReviews(){
+  if(!await requireAdmin())return;
+  const el=document.getElementById('reviewRows');el.innerHTML='<div class="muted">⏳ Memuat review...</div>';
+  const r=await sb.from('reviews').select('*').order('created_at',{ascending:false}).limit(50);
+  if(r.error){
+    el.innerHTML=`<div class="muted">Gagal memuat review: ${esc(r.error.message)}</div>`;
+    if(isMissingTable(r.error,'reviews')) showDbSetup('Tabel <b>public.reviews</b> belum tersedia. Jalankan SQL setup final untuk mengaktifkan review.');
+    return;
+  }
+  el.innerHTML=(r.data||[]).map(x=>`<div class="row"><div><b>${'★'.repeat(Math.min(5,Math.max(1,Number(x.rating||5))))}</b><div class="muted">${esc(x.product_name||x.product_id||'-')} · ${esc(x.customer_name||'Pelanggan')}</div><div>${esc(x.content||'')}</div></div><button class="danger" onclick="deleteReview(${JSON.stringify(String(x.id))})">Hapus</button></div>`).join('')||'<div class="muted">Belum ada review.</div>';
+}
+async function deleteReview(id){if(!await requireAdmin())return;if(!confirm('Hapus review ini?'))return;const r=await sb.from('reviews').delete().eq('id',id);if(r.error)return show('Gagal menghapus review: '+r.error.message);show('Review dihapus.');await loadReviews()}
+async function logout(){if(sb)await sb.auth.signOut({scope:'local'});document.getElementById('app').style.display='none';document.getElementById('loginGate').style.display='block';document.getElementById('loginPassword').value='';loginNotice('Anda sudah keluar dari halaman admin.')}
+async function openAdmin(u){
+  document.getElementById('email').textContent=u?.email||'Admin';document.getElementById('app').style.display='block';document.getElementById('loginGate').style.display='none';hide();
+  await Promise.allSettled([loadProducts(),loadProductBackups(),loadOrders(),loadReviews()]);
+}
+async function boot(){
+  if(!sb){loginNotice('Supabase belum dikonfigurasi. Periksa SUPABASE_URL dan SUPABASE_PUBLISHABLE_KEY.');return}
+  try{
+    const u=await user();
+    if(isAdmin(u)) await openAdmin(u); else document.getElementById('loginGate').style.display='block';
+  }catch(e){loginNotice('Tidak dapat memeriksa sesi: '+errorText(e))}
+  sb.auth.onAuthStateChange((event,session)=>{
+    setTimeout(async()=>{
+      if(event==='SIGNED_OUT'){document.getElementById('app').style.display='none';document.getElementById('loginGate').style.display='block'}
+      else if(session?.user&&isAdmin(session.user)){await openAdmin(session.user)}
+      else if(session?.user&&!isAdmin(session.user)){await sb.auth.signOut({scope:'local'});document.getElementById('app').style.display='none';document.getElementById('loginGate').style.display='block';loginNotice('Akun ini tidak memiliki akses administrator.')}
+    },0);
+  });
+}
+document.getElementById('image')?.addEventListener('input',updateImagePreview);
+boot();
+function showPanel(id,b){['orders','reviews'].forEach(x=>document.getElementById(x).style.display=x===id?'block':'none');document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active')}
+</script></body></html>

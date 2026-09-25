@@ -1,0 +1,23 @@
+MANADO P TAMPA BABELI - SEO / GOOGLE READY
+
+Domain: https://babelimanado.pages.dev/
+
+Sudah disiapkan:
+- robots.txt
+- sitemap.xml
+- canonical URL
+- Open Graph / social metadata
+- Googlebot index/follow directives
+- Schema.org WebSite + OnlineStore + ItemList
+- /admin/ noindex melalui X-Robots-Tag
+- cache headers untuk asset statis
+
+SETELAH DEPLOY:
+1. Buka https://babelimanado.pages.dev/robots.txt
+2. Buka https://babelimanado.pages.dev/sitemap.xml
+3. Daftarkan domain di Google Search Console.
+4. Submit sitemap: https://babelimanado.pages.dev/sitemap.xml
+5. Gunakan URL Inspection untuk homepage lalu Request Indexing.
+
+CATATAN:
+Produk katalog yang dimuat secara dinamis dari backend tetap dapat digunakan oleh pengunjung. Untuk SEO produk tingkat lanjut, idealnya setiap produk memiliki URL unik yang dapat di-crawl (mis. /produk/nama-produk). Versi ini tidak mengubah alur checkout/admin yang sudah ada.

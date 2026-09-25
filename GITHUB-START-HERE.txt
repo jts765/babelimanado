@@ -1,0 +1,19 @@
+MANADO P TAMPA BABELI - GITHUB READY
+
+1. Extract ZIP ini.
+2. Buat repository kosong di GitHub (jangan tambahkan README/.gitignore dari GitHub).
+3. Di Windows, buka PowerShell di folder project ini.
+4. Jalankan:
+   .\GITHUB-UPLOAD-WINDOWS.ps1
+5. Masukkan URL repository GitHub ketika diminta.
+
+CATATAN KEAMANAN
+- keystore.properties sengaja di-ignore.
+- *.jks, *.keystore, *.p12, .env, dan local.properties di-ignore.
+- Jangan pernah memasukkan service_role/secret key Supabase ke frontend.
+- Publishable key Supabase boleh berada di frontend bila RLS dan aturan akses database sudah benar.
+
+BUILD DI GITHUB
+- Tab Actions -> Build Android APK -> Run workflow.
+- Hasil APK tersedia di bagian Artifacts.
+- Workflow release juga tersedia, tetapi release production sebaiknya memakai signing key milik Anda sendiri melalui GitHub Secrets.
